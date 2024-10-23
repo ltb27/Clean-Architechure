@@ -30,7 +30,6 @@ public class TodoService : ITodoService
 
     public async Task<TodoDto> UpdateTodoStatusAsync(Guid id, bool isCompleted)
     {
-        // var todo = await _todoRepository.GetByIdAsync(id);
         throw new NotImplementedException();
     }
 
