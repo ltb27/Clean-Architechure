@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TodoApp.Application.Repositories;
 using TodoApp.Domain.Entities;
-using TodoApp.Domain.Repositories;
 using TodoApp.Infrastructure.Data;
 
 namespace TodoApp.Infrastructure.Repositories;
@@ -14,7 +14,7 @@ public class TodoRepository : ITodoRepository
         _context = context;
     }
 
-    public async Task<Todo> GetByIdAsync(Guid id)
+    public async Task<Todo?> GetByIdAsync(Guid id)
     {
         return await _context.Todos.FindAsync(id);
     }

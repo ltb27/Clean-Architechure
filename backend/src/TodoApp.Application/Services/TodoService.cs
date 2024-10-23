@@ -1,7 +1,7 @@
 ﻿using TodoApp.Application.DTOs;
 using TodoApp.Application.Interfaces;
+using TodoApp.Application.Repositories;
 using TodoApp.Domain.Entities;
-using TodoApp.Domain.Repositories;
 
 namespace TodoApp.Application.Services;
 
@@ -30,6 +30,7 @@ public class TodoService : ITodoService
 
     public async Task<TodoDto> UpdateTodoStatusAsync(Guid id, bool isCompleted)
     {
+        // var todo = await _todoRepository.GetByIdAsync(id);
         throw new NotImplementedException();
     }
 
@@ -38,7 +39,7 @@ public class TodoService : ITodoService
         throw new NotImplementedException();
     }
 
-    public async Task<TodoDto> GetTodoByIdAsync(Guid id)
+    public async Task<TodoDto?> GetTodoByIdAsync(Guid id)
     {
         throw new NotImplementedException();
     }

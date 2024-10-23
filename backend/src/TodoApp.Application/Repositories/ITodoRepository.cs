@@ -1,10 +1,10 @@
 ﻿using TodoApp.Domain.Entities;
 
-namespace TodoApp.Domain.Repositories;
+namespace TodoApp.Application.Repositories;
 
 public interface ITodoRepository
 {
-    Task<Todo> GetByIdAsync(Guid id);
+    Task<Todo?> GetByIdAsync(Guid id);
     Task<IEnumerable<Todo>> GetAllAsync();
     Task<IEnumerable<Todo>> GetByStatusAsync(bool isCompleted);
     Task AddAsync(Todo todo);

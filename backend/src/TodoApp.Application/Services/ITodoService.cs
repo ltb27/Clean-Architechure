@@ -4,7 +4,7 @@ namespace TodoApp.Application.Services;
 
 public interface ITodoService
 {
-    Task<TodoDto> GetTodoByIdAsync(Guid id);
+    Task<TodoDto?> GetTodoByIdAsync(Guid id);
     Task<IEnumerable<TodoDto>> GetAllTodosAsync();
     Task<IEnumerable<TodoDto>> GetTodosByStatusAsync(bool isCompleted);
     Task<TodoDto> CreateTodoAsync(CreateTodoDto dto);
