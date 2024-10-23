@@ -20,8 +20,7 @@ export const TodoList: React.FC = () => {
     }, [dispatch, filter]);
 
     const handleAddTodo = async (values: { title: string; description: string }) => {
-        // @ts-ignore
-         await dispatch(addTodo(values));
+        await dispatch(addTodo(values));
         setIsModalVisible(false);
         form.resetFields();
     };
